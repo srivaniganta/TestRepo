@@ -19,7 +19,7 @@ public class SpringBootRestAPIApplication {
     @Override
     public void customize(TomcatServletWebServerFactory factory) {
         factory.setContextPath("");
-        factory.setPort(8080);
+        factory.setPort(9092);
     }
 }
 
