@@ -10,5 +10,15 @@ public class SpringBootRestAPIApplication {
 		System.out.println("TEST");
 		SpringApplication.run(SpringBootRestAPIApplication.class, args);
 	}
+	
+	public class CustomContainer implements 
+  WebServerFactoryCustomizer<TomcatServletWebServerFactory> {
+
+    @Override
+    public void customize(TomcatServletWebServerFactory factory) {
+        factory.setContextPath("");
+        factory.setPort(8080);
+    }
+}
 
 }
